@@ -17,7 +17,6 @@ def euler(t, x, xf, v, h):
         t = t + h
         x = x + v * h
         v = v + g * h
-        print(v)
     if (x + v * h) != xf:
         h = (xf - x) / v
         t = t + h
@@ -28,7 +27,7 @@ def euler(t, x, xf, v, h):
 
 def find_step_size(t, x, v, s):
     if (abs(v - v_exp) <= abs(.01 * v_exp)) and abs(v - v_exp) <= abs(.01 * v_exp):
-        print("/nWith step size " + str(s) + ";")
+        print("\nWith step size " + str(s) + ";")
         print("The velocity is within " + str(v - v_exp) + " of the expected value")
         print("The time is within " + str(t - t_exp) + " of the expected value")
         print("The object, by Euler's method, falls " + str(z - x) + "m reaches the ground at time " + str(
